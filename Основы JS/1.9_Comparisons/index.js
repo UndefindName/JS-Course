@@ -2,6 +2,7 @@
 let name = prompt("Введите ваше имя:")
 alert(`Вас зовут ${name}`)
 */
+//
 
 alert(5 > 3);
 alert(3 != 6);

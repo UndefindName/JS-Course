@@ -1,7 +1,7 @@
 // alert
 alert("Hi");
 
-// prompt
+// prompt //
 let age = prompt('Сколько тебе лет?', 0);
 alert(`Тебе ${age} лет`);
 

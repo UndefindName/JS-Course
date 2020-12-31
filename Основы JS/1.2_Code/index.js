@@ -1,7 +1,7 @@
 alert('Hi');
 alert('World!');
 
-alert(3 +
+alert(3 + 2 +
   1 +
 2);
 

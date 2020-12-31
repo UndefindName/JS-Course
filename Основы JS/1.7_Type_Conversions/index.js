@@ -24,4 +24,4 @@ alert(Boolean(" ")); //true
 
 alert(Boolean("")); //false
 
-alert(Boolean("0")); //true
+alert(Boolean("0")); //true//

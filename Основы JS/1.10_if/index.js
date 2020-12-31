@@ -34,3 +34,4 @@ let login = prompt('Кто вы?');
   mesage = '';
 
 alert(mesage)
+//

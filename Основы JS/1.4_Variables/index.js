@@ -6,7 +6,7 @@ let user = [userName, age, message];
 
 alert(user);
 user.forEach(alert);
-
+//
 /*
  const NewYear = 31.12;
  NewYear = 5;
