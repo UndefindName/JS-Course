@@ -7,8 +7,8 @@ alert(`Вас зовут ${name}`)
 alert(5 > 3);
 alert(3 != 6);
 
-alert(null == undefined);
-alert(null === undefined);
+alert(null == undefined); // true
+alert(null === undefined); // false
 
 alert( null > 0 );  // (1) false
 alert( null == 0 ); // (2) false

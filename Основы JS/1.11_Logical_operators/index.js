@@ -1,8 +1,8 @@
-// (|| ИЛИ)
-console.log(true || true);
-console.log(true || false);
-console.log(false || true);
-console.log(false || false);
+// (|| ИЛИ) может находить первое правдивое значение
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || true); // true
+console.log(false || false); // false
 
 let hour = 12;
 let isWeekend = true;
@@ -10,12 +10,12 @@ if (hour < 10 || hour > 18 || isWeekend) {
     console.log("Офис закрыт.")
 }
 
-console.log( 1 || 0 ); 
-console.log( true || 'no matter what' ); 
+console.log( 1 || 0 ); // 1
+console.log( true || 'no matter what' ); // true 
 
-console.log( null || 1 ); 
-console.log( null || 0 || 1 ); 
-console.log( undefined || null || 0 );
+console.log( null || 1 ); // 1
+console.log( null || 0 || 1 ); // 1 
+console.log( undefined || null || 0 ); //0
 
 let x;
 false || (x = 1);
@@ -23,7 +23,7 @@ console.log(x);
 
 let bn = prompt("Введите ваш возрост:", '');
 (bn >= 18) || (alert(`Вам ещё нужно подождать: ${18 - bn} лет`));
-// На удивдение эти 2 строчки работают, но главное не забывать ; ставить
+// На удивдение эти 2 строчки работают, но главное не забывать ставить ;
 
 // (&& И) может находить первое ложное значение
 alert( 1 && 0 ); // 0
@@ -66,14 +66,14 @@ if (mm <14 || mm > 90) {}
 // Вариант 2
 if(!(mm >= 14 && mm <= 90)) {}
 // Вариант 3
-if (!(mm<14 || mm > 90)) {} //Этот вариант был проверен и он тоже является рабочим
+if (!(mm < 14 || mm > 90)) {} //Этот вариант был проверен и он тоже является рабочим
 
 // Задание №8
 if (-1 || 0) alert( 'first' ); // Выполнится 
 if (-1 && 0) alert( 'second' ); // Не выполнится
 if (null || -1 && 1) alert( 'third' ); // Выполнится
 
-// Задание №9//
+// Задание №9
 let login = prompt("Кто там?")
 
 if (login == "Админ") {
