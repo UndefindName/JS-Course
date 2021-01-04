@@ -74,9 +74,9 @@ while(i < 100) {
 
 // Задание №7
 let n = prompt(`Введите длинну промежутка: `, '');
-for (let i = 1; i <= n; i++) {
+for (let i = 2; i <= n; i++) {
   let sum = 0;
-  for (let j = 1; j <= i; j++) {
+  for (let j = 2; j <= i; j++) {
     if (i % j == 0) {
       sum++
     }
