@@ -15,7 +15,7 @@ const BigInt = 3578904657654374586785496518975165n;
 alert(BigInt);
 
 // Строка
-let str = "Привет";
+let str = "888";
 let str2 = 'Привет';
 let phrase = `Встраимоего выражения`;
  alert(`Проверка, ${phrase}`)
@@ -27,7 +27,7 @@ let ageFieldChecked = false;
 let isGreater = 4 > 1;
 alert(isGreater);
 
-// null //
+// null
 let age = null;
 
 // undefined
