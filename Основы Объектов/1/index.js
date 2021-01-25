@@ -5,7 +5,7 @@ let user = {
   age: 30,
   "likes birds": false,
 }; 
-// или let user = new Object();
+// или let user = new Object()
 
 alert(user.name);
 alert(user.age);
@@ -36,7 +36,7 @@ let bag2 = {
     ["Apple" + gadget]: 7,
 }
 
-alert(bag2.AppleNotebook)
+alert(bag2["Apple" + gadget])
 
 // Св-ва из переменной
 
