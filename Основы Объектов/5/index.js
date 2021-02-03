@@ -83,8 +83,7 @@ console.log("********************************");
 function Accumulator(startingValue) {
     this.value = startingValue,
     this.read = function() {
-        let index = +prompt("Введите значение:");
-        this.value += index;
+        this.value += +prompt("Введите значение:");
     }
 }
 
