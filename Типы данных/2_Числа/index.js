@@ -52,7 +52,7 @@ console.log( isNaN('str') );
 
 console.log( NaN == NaN ) // NaN никому не равен
 
-console.log("Число вернёт: " + isFinite('15') );
+console.log("Число вернёт: " + isFinite('15n') );
 console.log("Строка вернёт: " + isFinite('str') ); // Пустая строка вернёт true
 console.log("Infinity вернёт: " + isFinite(Infinity) );
 
@@ -100,3 +100,46 @@ const second = +prompt("Введите второе число");
 console.log( +(first + second).toFixed(1) );
 
 console.log('');
+
+// Задание №2
+console.log('Задание №2');
+
+let number;
+
+function readNumber() {
+    do {
+        number = prompt("Введите число!")
+    } while (!isFinite(number));
+
+    if (number === null || number === '') return null;
+
+    return +number;
+}
+
+console.log(`Number is: ${readNumber()}`);
+
+console.log('');
+
+// Задание №3
+console.log('Задание №3');
+
+function random(min, max) {
+   return min + Math.random() * (max - min);
+}
+
+console.log( random(1, 5) );
+console.log( random(1, 5) );
+console.log( random(1, 5) );
+
+console.log('');
+
+// Задание №4
+console.log('Задание №4');
+
+function randomInteger(min, max) {
+    return Math.trunc(min + Math.random() * max);
+}
+
+console.log( randomInteger(1, 5) );
+console.log( randomInteger(1, 5) );
+console.log( randomInteger(1, 5) );
