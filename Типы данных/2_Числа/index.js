@@ -47,14 +47,14 @@ console.log('');
 // Проверка: isFinite и isNaN
 console.log('Проверка: isFinite и isNaN');
 
-console.log( isNaN(NaN) );
-console.log( isNaN('str') );
+console.log( isNaN(NaN) ); //true
+console.log( isNaN('str') ); //true
 
 console.log( NaN == NaN ) // NaN никому не равен
 
-console.log("Число вернёт: " + isFinite('15n') );
+console.log("Число вернёт: " + isFinite('15n') ); //false
 console.log("Строка вернёт: " + isFinite('str') ); // Пустая строка вернёт true
-console.log("Infinity вернёт: " + isFinite(Infinity) );
+console.log("Infinity вернёт: " + isFinite(Infinity) ); // false
 
 // Так же есть Object.is(a, b) используется для сравнения a и b
 console.log('');
