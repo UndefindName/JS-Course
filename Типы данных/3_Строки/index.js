@@ -107,20 +107,20 @@ console.log( `` );
 // Получение подстроки
 console.log( `Получение подстроки` );
 
-const String = "Stringify";
+const substrTest = "Stringify";
 
-console.log( String.slice(0, 5) ); // Можно использовать -x значения (Поиск с конца)
-console.log( String.slice(1) );
-
-console.log( `` );
-
-console.log( String.substring(2, 6) ); // ring // Но не поддерживает -x значения
-console.log( String.substring(6, 2) ); // ring
+console.log( substrTest.slice(0, 5) ); // Можно использовать -x значения (Поиск с конца)
+console.log( substrTest.slice(1) );
 
 console.log( `` );
 
-console.log( String.substr(2, 5) ); // ringi // 2ое значение это длинна
-console.log( String.substr(-4, 3) ); // gif // поддерживает -x
+console.log( substrTest.substring(2, 6) ); // ring // Но не поддерживает -x значения
+console.log( substrTest.substring(6, 2) ); // ring
+
+console.log( `` );
+
+console.log( substrTest.substr(2, 5) ); // ringi // 2ое значение это длинна
+console.log( substrTest.substr(-4, 3) ); // gif // поддерживает -x
 
 console.log( `` );
 
@@ -134,3 +134,88 @@ console.log( `z`.codePointAt(0) ); // 122
 console.log( `Z`.codePointAt(0) ); // 90
 
 console.log( String.fromCodePoint(90) ); // Z
+
+console.log( '\u005a' ); // Z
+
+console.log( `` );
+
+let symbols = '';
+
+for (let i = 65; i <= 220; i++) {
+    symbols += String.fromCodePoint(i);
+};
+
+console.log(symbols);
+
+console.log( `` );
+
+// Правильное сравнение
+console.log( `Правильное сравнение` ); // Для сравнения используется метод // str.localeCompare(str2)
+
+console.log( 'Österreich'.localeCompare('Zealand') );
+
+console.log( `` );
+
+// Диакратические знаки и нормализация
+console.log( `Диакратические знаки и нормализация` );
+
+const sym1 = 'S\u0307\u0323';
+const sym2 = 'S\u0323\u0307';
+
+console.log(`sym1 : ${sym1}, sym2 : ${sym2}`);
+
+console.log( sym1 == sym2 );
+
+console.log( sym1.normalize() == sym2.normalize() ); // true
+
+console.log( `` );
+
+// Задание №1
+console.log( `Задание №1` );
+
+function ucFirst(word) {
+    if (!word) return word;
+
+    return word[0].toUpperCase() + word.slice(1);
+};
+
+console.log(ucFirst('степаша') === 'Степаша');
+
+console.log( `` );
+
+// Задание №2
+console.log( `Задание №2` );
+
+function checkSpam(message) {
+    if (message.includes('Tom') || message.includes('Bob')) return true;
+    return false
+};
+
+console.log( checkSpam(`Hi I'm Tom`) );
+console.log( checkSpam(`Hi I'm Bob`) );
+console.log( checkSpam(`Just Hi`) );
+
+console.log( `` );
+
+// Задание №3
+console.log( `Задание №3` );
+
+function truncate(str, maxlength) {
+    if (str.length > maxlength) return str.slice(0, maxlength) + '...';
+
+    return str;
+}
+
+console.log( truncate('Hiiiiiiiiiii', 5) );
+
+console.log( `` );
+
+// Задание №4
+console.log( `Задание №4` );
+
+function extractCurrencyValue(value) {
+    return +(value.slice(1));
+}
+
+console.log( extractCurrencyValue('$750') );
+console.log( extractCurrencyValue('$750') == 750 );
