@@ -110,7 +110,7 @@ console.log( `Получение подстроки` );
 const substrTest = "Stringify";
 
 console.log( substrTest.slice(0, 5) ); // Можно использовать -x значения (Поиск с конца)
-console.log( substrTest.slice(1) );
+console.log( substrTest.slice(-1) );
 
 console.log( `` );
 
@@ -187,13 +187,14 @@ console.log( `` );
 console.log( `Задание №2` );
 
 function checkSpam(message) {
-    if (message.includes('Tom') || message.includes('Bob')) return true;
-    return false
+    const LowerStr = message.toLowerCase();
+    if( LowerStr.includes('viagra') || LowerStr.includes('xxx') ) return true;
+    return false;
 };
 
-console.log( checkSpam(`Hi I'm Tom`) );
-console.log( checkSpam(`Hi I'm Bob`) );
-console.log( checkSpam(`Just Hi`) );
+console.log( checkSpam(`buy ViAGrA now`) );
+console.log( checkSpam(`free xxxxxxx`) );
+console.log( checkSpam(`innocent rabbit`) );
 
 console.log( `` );
 
@@ -206,7 +207,7 @@ function truncate(str, maxlength) {
     return str;
 }
 
-console.log( truncate('Hiiiiiiiiiii', 5) );
+console.log( truncate('Hiiiiiiiiiii', 2) );
 
 console.log( `` );
 
