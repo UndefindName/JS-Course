@@ -162,6 +162,73 @@ console.log(style[1] = 'Классика');
 
 console.log(style.shift());
 
-console.log(style.unshift('Регги').unshift('Рэп'));
+console.log(style.unshift('Рэп', 'Регги'));
 
 console.log( style );
+
+console.log( '' );
+
+// Задание №2
+console.log( 'Задание №2' );
+
+function sumInput() {
+    let arr =[];
+    let sum = 0;
+    while(1){
+        let x = prompt('Введите число:');
+        
+        if (!isFinite(x) || x === '' || x === null ) break;
+
+        arr.push(+x);
+        sum += +x;
+    }
+
+    return sum;
+};
+
+console.log( sumInput() );
+
+console.log( '' );
+
+//  Задание №3
+console.log( 'Задание №3' );
+
+function getMaxSubSum(arr) {
+
+let minNumber = 0;
+let finalSum = 5;
+let sum = 0;
+
+    //  Счёт колличества минимальных значений
+    for (let number of arr) {
+        if(number < 0) minNumber++;
+    }
+
+    // Сумма всех эллементов если нет -чисел
+    if(minNumber == 0) {
+        for (let number of arr) {
+            finalSum+= number;
+        };
+
+        return finalSum;
+    };
+
+    //  Если все числа с -
+    if(arr.length == minNumber) return 0;
+
+
+    for (let i = 0; i < arr.length - 1; i++) {
+        for(let y = arr.length - 1; y != i; y--) {
+            
+            for(let x = i; x < y; x++) {
+                sum += arr[x];    
+            }
+
+            if (finalSum > sum) finalSum = sum;
+        };
+    }
+    return finalSum;
+}
+
+
+console.log( getMaxSubSum([1, -3, 5, -4, -2, 6]) );
