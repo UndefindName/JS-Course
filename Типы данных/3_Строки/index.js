@@ -110,7 +110,7 @@ console.log( `Получение подстроки` );
 const substrTest = "Stringify";
 
 console.log( substrTest.slice(0, 5) ); // Можно использовать -x значения (Поиск с конца)
-console.log( substrTest.slice(-1) );
+console.log( substrTest.slice(-1) ); // -x показывает сколько символов с конца будет получено
 
 console.log( `` );
 
@@ -120,7 +120,7 @@ console.log( substrTest.substring(6, 2) ); // ring
 console.log( `` );
 
 console.log( substrTest.substr(2, 5) ); // ringi // 2ое значение это длинна
-console.log( substrTest.substr(-4, 3) ); // gif // поддерживает -x
+console.log( substrTest.substr(-4, 3) ); // gif // поддерживает -x. Отсчёт с конца начинается не с 0, а с 1
 
 console.log( `` );
 

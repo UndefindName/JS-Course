@@ -154,17 +154,17 @@ console.log( "" );
 // Задание №1
 console.log( "Задание №1" );
 
-const style = ['Джаз', 'Блюз'];
+const styles = ['Джаз', 'Блюз'];
 
-console.log(style.push('Рок-н-ролл'));
+console.log(styles.push('Рок-н-ролл'));
 
-console.log(style[1] = 'Классика');
+console.log(styles[1] = 'Классика');
 
-console.log(style.shift());
+console.log(styles.shift());
 
-console.log(style.unshift('Рэп', 'Регги'));
+console.log(styles.unshift('Рэп', 'Регги'));
 
-console.log( style );
+console.log( styles );
 
 console.log( '' );
 
