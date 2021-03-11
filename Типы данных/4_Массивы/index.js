@@ -194,41 +194,37 @@ console.log( '' );
 console.log( 'Задание №3' );
 
 function getMaxSubSum(arr) {
+    let maxSum = 0;
+    let possibleSum = 0;
 
-let minNumber = 0;
-let finalSum = 5;
-let sum = 0;
-
-    //  Счёт колличества минимальных значений
-    for (let number of arr) {
-        if(number < 0) minNumber++;
+    for( let number of arr) {
+        possibleSum += number;
+        maxSum = Math.max(maxSum, possibleSum);
+        if (possibleSum < 0) possibleSum = 0;
     }
 
-    // Сумма всех эллементов если нет -чисел
-    if(minNumber == 0) {
-        for (let number of arr) {
-            finalSum+= number;
-        };
+    return maxSum;
+};
 
-        return finalSum;
-    };
+console.log( getMaxSubSum( [1, -3, 5, -4, -2, 6]) );
+console.log( getMaxSubSum( [-9, 3, 9, -4, 6, -6]) );
+console.log( getMaxSubSum( [7, -3, -5, -9, -5, 5]) );
+console.log( getMaxSubSum( [-7, 2, 0, -4, -1, 4]) );
 
-    //  Если все числа с -
-    if(arr.length == minNumber) return 0;
+/* 
+function getMaxSubSum(arr) {
 
+let maxSum = 0;
 
     for (let i = 0; i < arr.length - 1; i++) {
-        for(let y = arr.length - 1; y != i; y--) {
-            
-            for(let x = i; x < y; x++) {
-                sum += arr[x];    
-            }
+        let possibleSum = 0;
 
-            if (finalSum > sum) finalSum = sum;
+        for(let j = i; j < arr.length ; j++) {
+            possibleSum += arr[j];
+            maxSum = Math.max(maxSum, possibleSum);
         };
     }
-    return finalSum;
+    return maxSum;
 }
-
-
-console.log( getMaxSubSum([1, -3, 5, -4, -2, 6]) );
+    Первый способ решения
+*/
