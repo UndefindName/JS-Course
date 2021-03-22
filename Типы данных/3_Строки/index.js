@@ -17,7 +17,7 @@ const guestList = `Guests:
 console.log(guestList);
 
 console.log(``);
-
+    
 // Спецсимволы
 console.log(`Спецсимволы`);
 
@@ -187,8 +187,8 @@ console.log( `` );
 console.log( `Задание №2` );
 
 function checkSpam(message) {
-    const LowerStr = message.toLowerCase();
-    if( LowerStr.includes('viagra') || LowerStr.includes('xxx') ) return true;
+    const lowerStr = message.toLowerCase();
+    if( lowerStr.includes('viagra') || lowerStr.includes('xxx') ) return true;
     return false;
 };
 
