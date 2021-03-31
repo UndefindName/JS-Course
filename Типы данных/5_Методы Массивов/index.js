@@ -1,5 +1,5 @@
 // splice
-console.group( 'spice' );
+console.group( 'splice' );
 
 const arrSplice = ['Я', 'изучаю', 'JavaScript', 'прямо', 'сейчас'];
 const spliceRemoved = arrSplice.splice(0, 3, 'Давай', 'танцевать');
