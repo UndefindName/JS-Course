@@ -255,3 +255,5 @@ function camelize(str) {
 camelize( 'background-color' ) == 'backgroundColor';
 camelize( 'list-style-image' ) == 'listStyleImage';
 camelize( '-webkit-translation' ) == 'WebkitTranslation';
+
+// Test
