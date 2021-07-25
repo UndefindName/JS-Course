@@ -59,7 +59,7 @@ console.log(`Boolean (true) в cтроку: ${String(true)}`);
 console.log(`Boolean (false) в число: ${+false}`);
 
 // Логическое преобразование
-console.log(`String (Some Text) в boolean: ${Boolean("Some Text")}`);
+console.log(`String (Some Text) в boolean: ${!!("Some Text")}`);
 
 console.groupEnd();
 
