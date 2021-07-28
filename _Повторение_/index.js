@@ -1,7 +1,8 @@
 // Глава 1
 console.group("Привет, мир!");
-    console.log("JS");
+    console.log("Просто вывод в консоль");
 console.groupEnd();
+console.log("");
 
 // Глава 2
 console.group("Переменные")
@@ -9,6 +10,7 @@ console.group("Переменные")
     const admin_C2 = name_C2;
     console.log(admin_C2);
 console.groupEnd();
+console.log("");
 
 // Глава 3
 console.group("Типы данных")
@@ -48,6 +50,7 @@ console.log (`Symbol:  ${typeof sym_C3}`)
 console.log(`object: ${arr_C3}`)
 
 console.groupEnd();
+console.log("");
 
 // Глава 4
 console.group("Преобразование типов");
@@ -62,8 +65,34 @@ console.log(`Boolean (false) в число: ${+false}`);
 console.log(`String (Some Text) в boolean: ${!!("Some Text")}`);
 
 console.groupEnd();
+console.log("");
 
 // Глава 5
 console.group("Логические операторы");
 
+// 3 оператора: ||(ИЛИ), &&(И), !(НЕ)
+
+console.log("||(ИЛИ)")
+
+console.log(`Возвращает false только в случае когда оба варианта false`);
+console.log(`При сравнении возвращает 1е истиное значение или последнее`);
+console.log("");
+
+console.log(`&&(И)`)
+console.log(`Диаметрально противоположен ||(ИЛИ)`);
+console.log("");
+
+console.log(`!(НЕ)`)
+console.log(`!(НЕ) преобразует в Boolean, а затем меняет на противоположное значение`)
+console.log("");
+
 console.groupEnd();
+console.log("");
+
+// Глава 6
+console.group("Оператор объединения с null '??'");
+
+console.log("Возвращает первый 'определённый' аргумент или последний");
+
+console.groupEnd();
+console.log("");
