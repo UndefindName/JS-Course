@@ -67,10 +67,10 @@ showMovie(age);
 function showPrimes(n) {
 
     for (let j = 2; j < n; j++){
-        if (!isPrime(i)) continue;
+        if (!isPrime(j)) continue;
     }
 
-    alert(i);
+    alert(j);
 }
 
 function isPrime(n) {
@@ -93,11 +93,7 @@ function checkAgee(age){
 
 // Задание №2
 function min(a, b) {
-   if (a < b){
-       return a;
-   } else {
-       return b;
-   }
+    return (a < b) ? a : b
 }
 
 alert(min(10, 45));

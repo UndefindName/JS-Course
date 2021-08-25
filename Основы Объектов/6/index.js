@@ -1,20 +1,20 @@
 // Опциональная цепочка '?.'
-let user = {
+const user = {
     name: "Tom",
 };
 
-const User = {
+const myNum = {
     number: 12n,
 };
 
-let test = {
-    sayHi(x) {
+const test = {
+    sayHi() {
         console.log("Hi");
     },
 }; 
 
 console.log( user.adress );
-console.log( User.adress?.street );
+console.log( myNum.adress?.street );
 
 console.log( typeof(User?.number) );
 
@@ -37,7 +37,7 @@ const user2 = {};
 user1.admin?.();
 user2.admin?.();
 
-let check = {};
+const check = {};
 
 check?.name = "John";
 

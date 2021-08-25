@@ -59,5 +59,3 @@ const sym1 = Symbol.for("Bob");
 
 console.log( Symbol.keyFor(sym) );
 console.log( Symbol.keyFor(sym1) );
-
-// Системные символы

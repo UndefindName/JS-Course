@@ -1,11 +1,12 @@
-// Литералы и св-ва
+// Создание объекта и св-ва объекта
 
 let user = {
   name: "John",
   age: 30,
   "likes birds": false,
 }; 
-// или let user = new Object()
+// let user = new Object() - конструктор объекта
+// let uset = {} - литерал объекта
 
 alert(user.name);
 alert(user.age);
