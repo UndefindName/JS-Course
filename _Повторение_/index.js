@@ -96,3 +96,9 @@ console.log("Возвращает первый 'определённый' арг
 
 console.groupEnd();
 console.log("");
+
+// Глава 7
+console.group("Функции");
+console.log("Объявление функции");
+
+console.groupEnd();
