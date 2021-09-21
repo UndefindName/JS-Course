@@ -180,7 +180,7 @@ function sumInput() {
         if (!isFinite(x) || x === '' || x === null ) break;
 
         arr.push(+x);
-        sum += +x;
+        sum += x;
     }
 
     return sum;
@@ -227,4 +227,20 @@ let maxSum = 0;
     return maxSum;
 }
     Первый способ решения
+*/
+
+/*
+function getMaxSubSum(arr) {
+
+    let maxSum = 0;
+    let possibleSum = 0;
+    
+        for (let i = 0; i < arr.length; i++) {
+             possibleSum += arr[i];
+             maxSum = Math.max(maxSum, possibleSum);
+             if(possibleSum < 0) possibleSum = 0;
+        }
+        return maxSum;
+    }
+
 */
