@@ -250,10 +250,195 @@ console.log( '' );
 console.log( 'Задание №1' );
 
 function camelize(str) {
+    return str
+        .split('-')
+        .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+        .join('');
 }
 
-camelize( 'background-color' ) == 'backgroundColor';
-camelize( 'list-style-image' ) == 'listStyleImage';
-camelize( '-webkit-translation' ) == 'WebkitTranslation';
+console.log(camelize( 'background-color' ) == 'backgroundColor');
+console.log(camelize( 'list-style-image' ) == 'listStyleImage');
+console.log(camelize( '-webkit-translation' ) == 'WebkitTranslation');
 
-// Test
+console.log('');
+
+// Задание №2
+console.log('Задание №2')
+
+function filterRange(arr, a, b) {
+    return arr.filter(item => (item >= a && item <= b));
+}
+
+const arrFilters = [5, 3, 8, 1]
+
+console.log(` Отфильтрованный массив: ${filterRange(arrFilters, 1, 4)}`)
+console.log(` Оригинальный массив: ${arrFilters}`)
+
+console.log('')
+
+// Задание №3
+console.log('Задание №3')
+
+function filterRangeInPlace(arr, a, b) {
+    for(let i = 0; i < arr.length; i++) {
+
+        let num = arr[i]
+
+        if (num > b || num < a) {
+            arr.splice(i, 1)
+            i--;
+        }
+    }
+    return arr
+}
+
+console.log(`Отфильтрован оригинальный массив: ${filterRangeInPlace(arrFilters, 1 ,4)}`)
+
+console.log('')
+
+// Задание №4
+console.log('Задание №4')
+
+const arrForSort = [5, 2, 1, -10, 8];
+
+console.log(` Массив до сортировки: ${arrForSort}`)
+
+arrForSort.sort((a, b) => b - a)
+
+console.log(` Массив после сортировки: ${arrForSort}`)
+
+console.log('')
+
+// Задание №5
+console.log('Задание №5')
+
+function copySorted(arr) {
+    return arr.slice().sort()
+}
+
+const arrClone = ["HTML", "JavaScript", "CSS"];
+
+console.log(`Оригинальный массив: ${arrClone}`)
+
+console.log(`Отсортированный: ${copySorted(arrClone)}`)
+
+console.log('')
+
+// Задание №6
+console.log('Задание №6')
+
+function Calculator() {
+    this.methods = {
+        '+': (a, b) => a + b,
+        '-': (a, b) => a - b,
+    };
+
+    this.calculate = function(str) {
+
+        const arr = str.split(' ');
+        const a = +arr[0];
+        const op = arr[1];
+        const b = +arr[2];
+
+        if(!this.methods[op] || isNaN(a) || isNaN(b)) return NaN;
+        return this.methods[op](a , b)
+    }
+
+    this.addMethod = function(name, func) {
+        this.methods[name] = func;
+    };
+}
+
+const powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+console.log( powerCalc.calculate("2 ** 3") );
+console.log( powerCalc.calculate("3 + 7") );
+
+console.log('')
+
+// Задание №7
+console.log('Задание №7')
+
+const vasya = {name: 'Вася', surname: 'Пупкин', id: 1, age: 25};
+const petya = {name: 'Петя', surname: 'Иванов', id: 2, age: 30};
+const masha = {name: 'Маша', surname: 'Петрова', id: 3, age: 29};
+
+const usersArr = [vasya, petya, masha];
+
+const names = usersArr.map(item => item.name);
+
+console.log(`Массив имён: ${names}`);
+
+console.log('')
+
+// Задание №8
+console.log('Задание №8')
+
+const usersMapped = usersArr.map(user => ({
+    fullName: `${user.name} ${user.surname}`,
+    id: user.id,
+}))
+
+console.log(usersMapped[0].id)
+console.log(usersMapped[0].fullName)
+
+console.log('')
+
+// Задание №9
+console.log('Задание №9')
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+let x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+console.log(`Стартовый массив: ${x}`)
+
+console.log(`1. Перемешанный массив: ${shuffle(x)}`);
+
+console.log(`2. Перемешанный массив: ${shuffle(x)}`);
+
+console.log(`3. Перемешанный массив: ${shuffle(x)}`);
+
+console.log('')
+
+// Задание №10
+console.log('Задание №10')
+
+function getAverageAge(arr) {
+    return arr.reduce((start, item) => item.age + start, 0) / arr.length;
+}
+
+console.log( `Средний возрост: ${getAverageAge(usersArr)}` );
+
+console.log('')
+
+// Задание №11
+console.log('Задание №11')
+
+function unique(arr) {
+    const result = []
+
+    for (let key of arr) {
+        if(!result.includes(key)) {
+            result.push(key);
+        }
+    }
+
+    return result
+}
+
+const strings = ["кришна", "кришна", "харе", "харе",
+  "харе", "харе", "кришна", "кришна", ":-O"
+];
+
+console.log(`Изначальный массив: ${strings}`);
+
+console.log(`Массив без повторов: ${unique(strings)}`)
