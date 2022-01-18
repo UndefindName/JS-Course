@@ -82,5 +82,5 @@ meetup.self = meetup;
 
 console.log(JSON.stringify(meetup, (key, value) => {
     console.log(`${key}: ${value}`);
-    return ((key != "" && value == meetup) ? undefined : value)
+    return ((key != "" && value === meetup) ? undefined : value)
 }, 1))
