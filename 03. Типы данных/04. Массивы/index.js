@@ -186,6 +186,17 @@ function sumInput() {
     return sum;
 };
 
+/*
+function sumInput() {
+    let arr = []
+    while (1) {
+        let num = prompt("Введите число:");
+        if (!isFinite(num) || num == "" || num == null) return arr.reduce((sum, start) => sum += start, 0)
+        arr.push(+num)
+    }
+} 
+*/
+
 console.log( sumInput() );
 
 console.log( '' );
@@ -231,16 +242,17 @@ let maxSum = 0;
 
 /*
 function getMaxSubSum(arr) {
-
-    let maxSum = 0;
-    let possibleSum = 0;
-    
-        for (let i = 0; i < arr.length; i++) {
-             possibleSum += arr[i];
-             maxSum = Math.max(maxSum, possibleSum);
-             if(possibleSum < 0) possibleSum = 0;
+    let sum = 0;
+    let cur = 0;
+ 
+    for (let val of arr) {
+        cur += val
+        if(cur <= 0) {
+            cur = 0;
+            continue
         }
-        return maxSum;
+        sum = Math.max(sum, cur)
     }
-
+    return sum
+}
 */

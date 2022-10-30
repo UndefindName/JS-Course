@@ -61,3 +61,17 @@ function topSalary(salaries) {
 }
 
 console.log(topSalary(salaries))
+
+/*
+let salaries = {
+  "John": 100,
+  "Pete": 300,
+  "Mary": 250
+};
+
+function topSalary(obj) {
+    let map = 0
+    let name = (Math.max(...(map = new Map(
+        Object.entries(obj).map(item => item.sort()))).keys()))
+    return map.get(name)
+} */

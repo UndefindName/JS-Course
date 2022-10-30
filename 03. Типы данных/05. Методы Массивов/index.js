@@ -21,7 +21,7 @@ console.log( '' );
 // slice
 console.group( 'slice' );
 
-const arrSlice = ['t', 'e', 's', 't']; 
+const arrSlice = ['t', 'e', 's', 't'];
 
 console.log( arrSlice.slice(1, 3) ); // ["e", "s"]
 console.log( arrSlice.slice(-2) ); //  ["s", "t"]
@@ -349,6 +349,19 @@ function Calculator() {
     };
 }
 
+/*
+function Calculator() {
+    this.calculate = function(str) {
+        let [a, b, c] = str.split(" ")
+        if(!this[b] || isNaN(a) || isNaN(c))
+        return this[b](a, c)
+    };
+    this.addMethod = function(name, func) {
+        this[name] = func;
+    }
+}
+*/
+
 const powerCalc = new Calculator;
 powerCalc.addMethod("*", (a, b) => a * b);
 powerCalc.addMethod("/", (a, b) => a / b);
@@ -441,4 +454,4 @@ const strings = ["кришна", "кришна", "харе", "харе",
 
 console.log(`Изначальный массив: ${strings}`);
 
-console.log(`Массив без повторов: ${unique(strings)}`)
+console.log(`Массив без повторов: ${unique(strings)}`) 

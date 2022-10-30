@@ -98,6 +98,8 @@ function isEmpty(obj) {
     return true;
 }
 
+// function isEmpty(obj) {return Object.keys(obj).length == 0 ? true : false}
+
 // Задание №3
 let sum = 0;
 
@@ -112,6 +114,8 @@ for (let key in salaries) {
 }
 
 alert(sum);
+
+// sum = Object.values(salaries).reduce((a, b) => a + b)
 
 // Задание №4
 let menu = {

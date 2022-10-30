@@ -26,6 +26,7 @@ alert(admin)
 // Задание №2
 const ourPlanetName = 'Земля';
 let currentUserName;
+
 // Задание №3
 const BIRTHDAY = '30.03';
-const age = 16
+age = 16
