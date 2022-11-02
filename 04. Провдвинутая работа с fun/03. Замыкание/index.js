@@ -189,11 +189,8 @@ function byField(str){
     return (a, b) => a[str] > b[str] ? 1 : -1
 };
 
-users.sort(byField("name"));
-users.forEach(user => console.log(user.name));
-
-users.sort(byField("age"));
-users.forEach(user => console.log(user.age));
+console.table(users.sort(byField("name")));
+console.table(users.sort(byField("age")));
 
 console.log('');
 console.log('№4');
