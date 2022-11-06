@@ -52,4 +52,4 @@ function printNumbersTimeout(a, b) {
 };
 
 // printNumbersTimeout(1, 10);
-console.log('Задача решена, решение смотреть вкоде')
+console.log('Задача решена, решение смотреть в коде')
