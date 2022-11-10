@@ -172,7 +172,7 @@ function throttle(f, ms) {
             return
         };
 
-        f.apply(this, x);
+        f.apply(this, arguments);
         coolDown = true;
 
         setTimeout(function() {
