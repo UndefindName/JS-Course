@@ -41,7 +41,7 @@ console.log('get/set, другие сокращения');
 
 class GetName {
     constructor(name) {
-        this.name = name;
+        this._name = name;
     };
 
     get name() {
