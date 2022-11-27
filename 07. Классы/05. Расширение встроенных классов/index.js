@@ -5,12 +5,8 @@ class PowerArray extends Array {
         return this.length === 0;
     }
 
-    // static get [Symbol.species]() {
-    //     return PowerArray
-    // }
-
-    static test() {
-        return 'Hi'
+    static get [Symbol.species]() {
+        return PowerArray
     }
 }
 
