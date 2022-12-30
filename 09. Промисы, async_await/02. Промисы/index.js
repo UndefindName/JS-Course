@@ -1,14 +1,15 @@
 console.log('Промисы');
 
-let promise = new Promise(function(resolve, reject) {
-    if(Math.random() >= 0.5) resolve('Done!');
-    // else reject(new Error('Whoops!'))
+let promise = new Promise(function (resolve, reject) {
+    if (Math.random() >= 0.5) resolve('Done!');
+    else reject(new Error('Whoops!'))
 });
 
-// promise.then(
-//     result => console.log(result),
-//     error =>  console.log(error),
-// );
+promise.then(
+    result => console.log(result),
+).catch(
+    error => console.log(error),
+)
 
 console.log('');
 // console.log('Пример: loadScript');
@@ -41,4 +42,3 @@ console.log('Задача №2');
 // };
 
 // delay(1000).then(() => console.log('Выполнилось через 1 секунду'));
-
