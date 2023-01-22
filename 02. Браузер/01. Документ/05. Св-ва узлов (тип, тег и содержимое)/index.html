@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,65 @@
     <style>
         body {
             background-color: #111;
+            color: #fff;
+        }
+        #list {
+            background-color: rgb(180, 148, 32);
+            width: 13%;
+            border: 5px solid rgb(180, 148, 32);
+            border-radius: 30px;
+            padding: 15px;
+            margin-left: 20px;
+        }
+        #btn {
+            background-color: rgb(180, 148, 32);
+            border: 5px solid rgb(180, 148, 32);
+            border-radius: 30px;
+            margin-left: 20px;
         }
     </style>
 </head>
+
 <body>
+    <ul id="list">
+        <li>Животные
+            <ul>
+                <li>Млекопитающие
+                    <ul>
+                        <li>Коровы</li>
+                        <li>Ослы</li>
+                        <li>Собаки</li>
+                        <li>Тигры</li>
+                    </ul>
+                </li>
+                <li>Другие
+                    <ul>
+                        <li>Змеи</li>
+                        <li>Птицы</li>
+                        <li>Ящерицы</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Рыбы
+            <ul>
+                <li>Аквариумные
+                    <ul>
+                        <li>Гуппи</li>
+                        <li>Рыба-ангел</li>
+                    </ul>
+                </li>
+                <li>Морские
+                    <ul>
+                        <li>Морская форель</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <button onclick="innerList()" id="btn">Вывести список в консоль</button>
     <script src="index.js"></script>
 </body>
+
 </html>
