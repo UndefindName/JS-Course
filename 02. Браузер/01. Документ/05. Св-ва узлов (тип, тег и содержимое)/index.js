@@ -14,12 +14,17 @@ let oldText = btn.innerHTML;
 console.log('');
 console.log('Задача №1');
 
-let id = document.getElementById('list');
-let arr = Array.from(id.getElementsByTagName('li'));
+function decorList(id, elem) {
 
-function innerList() {
-    console.clear()
-    arr.forEach((li) => console.log(li.firstChild.data.trim() + ': ' + li.getElementsByTagName('li').length));
-    console.log('');
-    console.log("Общая длинна: " + arr.length);
+    let tag = document.getElementById(id);
+    let arr = Array.from(tag.getElementsByTagName(elem));
+
+    return function() {
+        console.clear()
+        arr.forEach((li) => console.log(li.firstChild.data.trim() + ': ' + li.getElementsByTagName('li').length));
+        console.log('');
+        console.log("Общая длинна: " + arr.length);
+    }
 }
+
+const innerList = decorList('list', 'li')

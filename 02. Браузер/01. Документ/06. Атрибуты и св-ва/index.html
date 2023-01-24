@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,39 @@
     <style>
         body {
             background-color: #111;
+            color: #fff;
+        }
+
+        a {
+            color: green;
+            text-decoration: none;
+        }
+
+        li {
+            margin: 5px;
+        }
+
+        .links {
+            margin-top: 10px;
         }
     </style>
 </head>
-<body>
+
+<body id="main" something="test">
+    <div id="widget" data-widget-name="menu">Choose...</div>
+
+    <div class="links" id="list">
+        <a name="list">the list</a>
+        <ul>
+            <li><a href="http://google.com">http://google.com</a></li>
+            <li><a href="/tutorial">/tutorial.html</a></li>
+            <li><a href="local/path">local/path</a></li>
+            <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+            <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+            <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+        </ul>
+    </div>
     <script src="index.js"></script>
 </body>
+
 </html>
