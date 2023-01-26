@@ -1,24 +1,41 @@
-console.log('Изменение документа');
-
 function createDIV() {
-    let arr = document.querySelectorAll('.alert')
+    let input = document.getElementById('divInput');
+    let card = document.createElement('div');
     let div = document.createElement('div');
-    let html = document.getElementById('divInput')
+    let btn = document.createElement('button');
 
+    // Лимит карточек
+    {
+        let arr = document.querySelectorAll('.card');
+        if (arr.length == 7) arr[0].remove();
+    }
 
-    if(arr.length == 7) arr[6].remove()
+    // Создание карточки
+    {
+        btn.textContent = "Удалить";
+        btn.className = 'deleteBtn'
+        btn.setAttribute('onclick', 'deleteCard(this)')
 
-    console.log(arr.length)
+        div.innerHTML = `${input.value}`
+        div.className = 'alert'
 
-    div.className = 'alert';
-    div.innerHTML = `${html.value}`;
+        card.append(div);
+        card.append(btn);
+        card.className = 'card';
 
-    html.value = ''
-    document.body.children[1].prepend(div)
+        input.value = ''
+        document.body.children[1].append(card)
+    }
 }
 
 function check(event) {
     if (event.which == 13) createDIV()
 }
 
-console.log
+function clearList() {
+    document.querySelectorAll('.card').forEach(elem => elem.remove())
+}
+
+function deleteCard(elem) {
+    elem.parentNode.remove();
+}

@@ -6,77 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-        body {
-            background-color: #111;
-            color: #fff;
-            font-family: 'Roboto', sans-serif;
-        }
-        
-        .main {
-            max-width: 750px;
-            margin: auto;
-        }
-
-        .alert {
-            max-width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #d6edc6;
-            border-radius: 4px;
-            color: #3c763d;
-            background-color: #dff0d8;
-            opacity: 0;
-            animation: anim 1.5s forwards;
-            word-break: break-all;
-        }
-
-        @keyframes anim {
-            0% {opacity: 0;}
-            100% {opacity: 1;}
-        }
-
-        button {
-            outline: none;
-            margin-top: 10px;
-            bottom: 1px solid #d6edc6;
-            border-radius: 4px;
-            padding: 5px;
-            font-size: 15px;
-            font-family: inherit;
-            color: #3c763d;
-            background-color: #dff0d8;
-        }
-
-        input {
-            outline: none;
-            border: 2px solid #d6edc6;
-            border-radius: 4px;
-            padding: 5px;
-            background-color: inherit;
-            font-size: 15px;
-            color: #00b7a1;
-            min-width: 50%;
-        }
-
-        h1 {
-            text-align: center;
-            color: #00b7a1;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Изменение документа</h1>
     <div class="main">
-        <div class="alert">
-            <strong>Всем привет!</strong> Вы прочитали важное сообщение
-        </div>
-
-        <button onclick="createDIV()">Создать DIV</button>
+        <button onclick="createDIV()" class="controlBtn">Создать DIV </button>
         <input type="text" id="divInput" onkeyup="check(event)">
+        <button onclick="clearList()" class="controlBtn clear">Очистить список</button>
+
+        <div class="card">
+            <div class="alert">
+                <strong>Всем привет!</strong> Вы прочитали важное сообщение
+            </div>
+            <button class="deleteBtn" onclick="deleteCard(this)">Удалить</button>
+        </div>
     </div>
 
     <script src="index.js"></script>
